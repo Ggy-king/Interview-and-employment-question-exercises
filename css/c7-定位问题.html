@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        body {
+            margin: 20px;
+        }
+        .relative {
+            /* position: relative; */
+            width: 400px;
+            height: 200px;
+            border: 1px solid #ccc;
+
+            top: 20px;
+            left: 50px;
+        }
+        .absolute {
+            position: absolute;
+            width: 200px;
+            height: 100px;
+            border: 1px solid red;
+            text-align: center;
+            line-height: 100px;
+
+            top: 20px;
+            left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <p>relative 依据自身定位</p>
+    <p>absolute 依据最近一层定位元素定位</p>
+    <!-- 定位元素 relative absolute fixed 没有则返回body -->
+    <div class="relative">
+        <div class="absolute">this is absolute</div>
+    </div>
+</body>
+</html>

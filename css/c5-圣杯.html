@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body {
+            min-width: 550px;
+        }
+        .header{
+            width: 100%;
+            text-align: center;
+            background-color: #ccc;
+        }
+        .container {
+            padding-left: 200px;
+            padding-right: 300px;
+        }
+        .column {
+            float: left;
+        }
+        .center {
+            width: 100%;
+            text-align: center;
+            background-color: green;
+        }
+        .left {
+            position: relative;
+            right: 200px;
+            width: 200px;
+            margin-left: -100%;
+            text-align: center;
+            background-color: red;
+        }
+        .right {
+            width: 300px;
+            margin-right: -300px;
+            text-align: center;
+            background-color: pink;
+        }
+        .footer {
+            /* clear: both; */
+            width: 100%;
+            text-align: center;
+            background-color: yellow;
+        }
+        .clearfix::after {
+            content: '';
+            display: table;
+            clear: both;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="header">这里是头部</div>
+    <div class="container clearfix">
+        <div class="center column">这里是中间</div>
+        <div class="left column">这里是左侧</div>
+        <div class="right column">这里是右侧</div>
+    </div>
+    <div class="footer">这里是底部</div>
+</body>
+</html>

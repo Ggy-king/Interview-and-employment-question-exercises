@@ -1,0 +1,12 @@
+/* 问 div的offsetWidth多大 */
+
+.div {
+    width: 100px;
+    padding: 10px;
+    border: 1px solid black;
+    margin: 10px;
+}
+
+/* 答 offsetWidth = (内容宽度 + 内边距 + 边框)   不包含外边距 */
+
+/* 故结果为 122px */   
