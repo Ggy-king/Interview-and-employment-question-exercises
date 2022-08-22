@@ -1,7 +1,30 @@
 //编写一个通用的事件监听函数
-function bindEvent(elem, type, fn) {
-    elem.addEventListener(type,fn)
+// function bindEvent(elem, type, fn) {
+//     elem.addEventListener(type,fn)
+// }
+function bindEvent(elem, type, selector, fn) {   //selector 为css选择器
+    if (fn == null) {  //判断用户是否传入第三个参数
+        fn = selector
+        selector = null
+    }
+    elem.addEventListener(type, event => {
+        const target = event.target
+        if (selector) {
+            //代理绑定
+            if (target.matches(selector)) {   //matches判断是否触发元素
+                fn.call(target, event)
+            }
+
+        } else {
+            //普通绑定
+            fn.call(target, event)
+        }
+    })
+
+
 }
+
+
 const a = document.getElementById('link1')
 bindEvent(a, 'click', e => {
     e.preventDefault()  //阻止默认行为
