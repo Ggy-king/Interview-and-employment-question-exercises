@@ -11,6 +11,13 @@
     <li>2 基于vnode再执行patch和diff</li>
     <li>3 使用webpack vue-loader  会在开发环境下编译模板</li>
   </ul>
+
+  <!-- vue组件中也可以使用render代替template -->
+
+
+  <p>响应式 监听data属性getter setter</p>
+  <p>模板编译 模板到render函数 再到vnode</p>
+  <p>vdom patch(elem,vnode)和patch(vnode,newVonde)</p>
 </template>
 
 <script>
