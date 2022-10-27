@@ -12,3 +12,8 @@ shouldComponentUpdate(nextProps, nextState) {
 }
 
 // 对比之前的state 判断某些组件数据是否需要更新
+
+
+/**
+ * 需要使用不可变值
+ */
