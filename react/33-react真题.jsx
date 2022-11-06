@@ -67,3 +67,72 @@
  */
 
 
+/**
+ * 11 函数组件和class组件的区别
+ * 纯函数 输入props 输出jsx
+ * 没有实例 没有生命周期 没有state
+ * 不能扩展其他方法
+ */
+
+/**
+ * 12 什么是受控组件
+ * 表单的值 受到state控制
+ * 需要自行监听onChange 更新state
+ * 对比非受控组件
+ */
+
+
+/**
+ * 13 何时使用异步组件
+ * 同vue
+ * 加载大组件
+ * 路由懒加载
+ */
+
+
+/**
+ * 14 多个组件有公共逻辑 如何抽离
+ * 高阶组件HOC
+ * Render Props
+ * mixin已被React废弃
+ */
+
+/**
+ * 15 redux如何进行异步请求
+ * 使用异步action
+ * 如redux-thunk
+ */
+
+/**
+ * 16 react-router如何配置懒加载
+ * lazy(() => import('./路径))
+ */
+
+/**
+ * 17 PureComponent有何区别
+ * 实现了浅比较的SCU
+ * 性能优化
+ * 但要结合不可变值使用
+ */
+
+/**
+ * 18 react事件和DOM事件的区别
+ * 所有事件挂载到document
+ * event不是原生的 是SyntheticEvent合成事件对象
+ * dispatchEvent
+ */
+
+/**
+ * 19 react性能优化
+ * 渲染列表时加key
+ * 自定义事件 dom事件及时销毁
+ * 合理使用异步组件
+ * 减少函数bind this次数
+ * 合理使用 SCU pureComponent memo
+ * 合理使用Immutable.js
+ * webpack优化
+ * 前端通用优化 如懒加载
+ * 使用SSR
+ */
+
+ 
