@@ -1,0 +1,71 @@
+<!-- HTML -->
+
+
+<!DOCTYPE html> DOCTYPE为声明 作用是防止不同浏览器的怪异模式
+<!-- <title></title> 有 -->
+
+<ol type="A">
+    <li></li>
+    <li></li>
+    <li></li>
+</ol>
+ol有序列表标签具有type属性 1 a A i ii等排序表示方式
+
+<ul type="circle">
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+ul无序列表标签 前面无排序变成圆点 type属性有disc默认实心圆 circle空心圆 square小方块 none不显示
+
+
+<table>表格</table>
+<tr>行</tr>
+<td>列</td>
+<table>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+table>tr*3>td*6{值}
+
+表格属性很多但常用的很少 基本样式使用css多
+如合并单元格水平colspan="数字" 垂直rowspan="数字"
+
+
+
+
+form表单
+<!-- 表单元素 -->
+<form action="" method="post" name="myform">
+    <!-- 表单域 -->
+    <input type="date" name="" id=""> 
+    <button type="submit" value="Submit"></button>
+</form>
+<!-- action为服务器的地址 method为数据提交的方式 -->
+
+
+
+在h5出现之前 元素分为块级与内联元素
+h5出现之后是按照内容模型来区分 1元数据型 2区块型 3标题性 4文档流型 5语句型 6内嵌型 7交互型 (元素不属于任何型的称为穿透的 不止一个称为混合的)
+
+
+<header></header>
+<nav>导航</nav>
+<main>
+    <article>
+        <!-- article为内容模块 -->
+        <section>子文章</section>
+        <section>子文章</section>
+        <section>子文章</section>
+    </article>
+    <aside>侧边栏</aside>
+</main>
+<footer></footer>
