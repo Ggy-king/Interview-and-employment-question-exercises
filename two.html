@@ -1,0 +1,79 @@
+<!-- CSS -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 在head中写style -->
+    <style>
+        /* 内联样式 */
+        /* 内部样式 */
+        /* 外部样式 */
+        #ti {
+            /* font-weight: normal; normal bold bolder lighter */
+            /* font-style: italic;  */
+
+            background-color: aliceblue;
+            background-image: url("");
+            background-position: bottom;
+            background-repeat: initial;
+            background-size: cover;
+
+            text-align: justify;
+            text-decoration: none;
+            text-transform: lowercase;
+            text-indent: 2em;
+
+            border: 1px solid red;
+            border-collapse: collapse;  /* 折叠线条 塌陷*/ 
+            vertical-align: baseline;
+
+        }
+
+        ul li {
+            /* 后代选择器 */
+        }
+
+        ol>li {
+            /* 子代选择器 只对子代的第一位生效 */
+        }
+
+        h3+p {
+            /* 相邻兄弟选择器 只有相邻的那几个生效 上面这个只有相邻两个生效而且只能向下选择 12生效 3不生效 */
+        }
+
+        h3~p {
+            /* 通用兄弟选择器 选择元素之间同级所有一样的生效 */
+        }
+
+    </style>
+
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+
+    <div id="ti"></div>
+
+    <ul>
+        <li></li>
+    </ul>
+
+    <ol>
+        <li>
+            
+        </li>
+    </ol>
+
+
+    <h3>1</h3>
+    <p>2</p>
+    <p>3</p>
+
+
+</body>
+
+</html>
