@@ -151,3 +151,46 @@ let g = gen()
 g.next()
 g.next()
 g.next()
+
+
+// Class类
+// es5之前
+function Person(name,age){
+    this.name = name
+    this.age = age
+}
+
+Person.prototype.say = function() {
+    console.log(this.name,this.age)
+}
+
+let person = new Person("xiaowang",56)
+// es6
+class Person {
+    constructor(name, age) {
+        this.name = name
+        this.age = age
+    }
+    say() {
+        console.log(this.name,this.age);
+    }
+}
+// class继承
+class Student extends Person {
+    // 静态属性和方法会自动继承且覆盖
+    constructor(name, age, score) {
+        super(name,age)
+    }
+}
+
+
+// 模块化
+{/* <script defer></script> */} // 异步加载
+{/* <script async></script> */ } // 异步加载
+{/* <script src="1.js" type="module"></script> */ }  //模块化解决方案
+export default al //导出
+import al from './five' //导入
+
+
+// nodejs中的模块化
+const a1 = require("./five")
