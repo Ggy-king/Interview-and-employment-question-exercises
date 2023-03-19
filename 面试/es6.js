@@ -8,6 +8,9 @@ str.endsWith() // 判断str是否以某字符串结尾 返回true 第二参数�
 str.repeat() // 将str重复n次 并返回新字符串
 
 
+
+
+
 // 数值扩展
 // 1 支持二进制八进制的写法
 let num = 0x100
@@ -19,6 +22,9 @@ let num2 = 0o100
 // 5 Math.sign() 判断一个数是正数 负数 还是0 还是NaN(不是数字的都是) 返回 +1 -1 +0 -0 NaN
 
 
+
+
+
 // 数组扩展
 // 1 展开运算符
 // 2 Array.from() 将类似于数组的结构转化成数组
@@ -26,6 +32,9 @@ let num2 = 0o100
 // 4 arr.find() arr.findIndex arr.findLastIndex()
 // 5 arr.fill(a,b,c) 填充替换 从b到c填充a
 // 6 arr.flat() arr.flatMap() 扁平化处理 降维
+
+
+
 
 
 // 对象扩展
@@ -41,10 +50,16 @@ let obj = {
 // 4 Object.is 几乎与===一样的功能 但是Object.is(NaN,NaN) 返回true
 
 
+
+
+
 // 参数默认值
 // 1 参数默认值
 // 2 剩余参数 rest参数   function(...data) {}
 // 3 name属性 函数的名字
+
+
+
 
 
 // Symbol  有时候对象中是属性总会被外面的重名而被覆盖  防止对象名与属性名重名
@@ -64,11 +79,17 @@ let obj1 = {
 Reflect.ownKeys(obj1).forEach(item => console.log(item, obj[item]))  //遍历所有的类型
 
 
+
+
+
 // iterator 主要是为各种数据提供一个同一的接口 进行排列 iterator接口主要供for...of循环
 let iter = arr[Symbol.iterator]
 iter.next()  //每一次的遍历都是next的下一次
 // 1 只有该类型的原型中有iterator接口 就可以使用for of
 // Array Set Map String arguments NodeList 默认有
+
+
+
 
 
 // Set
@@ -82,6 +103,9 @@ iter.next()  //每一次的遍历都是next的下一次
 // 8 s.forEach() 遍历每一个成员
 
 
+
+
+
 // Map
 // 1 类似对象 但是任何类型的值都可以当做键
 let m1 = new Map(
@@ -90,6 +114,9 @@ let m1 = new Map(
     [{a:1},"大连"]
 )
 // 2 set get delete clear has size
+
+
+
 
 
 // proxy代理 
@@ -116,6 +143,9 @@ let proxy = new Proxy(obj3, {
 })
 
 
+
+
+
 // Reflect
 // Reflect可以用于获取目标对象的行为 与Object相似 其方法与Proxy是对应的
 // 1 代替Object 某些方法
@@ -130,10 +160,16 @@ Reflect.defineProperty(obj, "age") //新写法
 // 4 配合proxy 其会找到默认的方法
 
 
+
+
+
 // Promise
 // 1 三种状态 pending操作未完成 fulfilled操作成功 rejected操作失败 状态一旦改变就不会变成其他的了
 // 2 Promise.all([])  //全部的Promise结束后才能执行某操作
 // 3 Promise.race([])  //有任何一个结束即开始
+
+
+
 
 
 // Generator函数(生成器函数)
@@ -151,6 +187,10 @@ let g = gen()
 g.next()
 g.next()
 g.next()
+
+
+
+
 
 
 // Class类
@@ -184,13 +224,21 @@ class Student extends Person {
 }
 
 
+
+
+
 // 模块化
 {/* <script defer></script> */} // 异步加载
 {/* <script async></script> */ } // 异步加载
 {/* <script src="1.js" type="module"></script> */ }  //模块化解决方案
 export default al //导出
-import al from './five' //导入
+import al from './js' //导入
+
+
+
 
 
 // nodejs中的模块化
-const a1 = require("./five")
+const a1 = require("./js")
+
+

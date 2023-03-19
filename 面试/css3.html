@@ -1,0 +1,77 @@
+<!-- css3 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* flex布局 */
+
+        /* 父元素上的属性 */
+        div {
+            display: flex;  /* 默认使元素横向排列*/
+
+            /* row 横向从左到右 默认排列 */
+            /* row-reverse 反向 */
+            /* column 纵向排列 */
+            /* column-reverse 反向 */
+            flex-direction: column;  /* 子元素排列顺序*/
+
+            /* flex-start/flex-end/center */
+            justify-content: center; /* 子元素在父盒子中垂直方向上对齐方式*/
+
+            /* flex-start/flex-end/center */
+            align-items: baseline; /* 子元素在父盒子中水平方向上对齐方式*/
+
+        }
+
+        /* 子元素上的属性 */
+        span {
+            flex: 1;
+            flex-grow: inherit; /*或flex*/ /* 某子元素占当下总位置的比率 该属性设置后宽度不在生效*/
+
+        }
+
+
+        article {
+            /* 圆角 */
+            border-radius: 50%;
+
+            /* 阴影 */
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5); /* 水平阴影的位置 垂直阴影的位置 模糊距离 阴影颜色*/
+        }
+
+        /* 动画 */
+        @keyframes myAnim {
+            0% {}
+            50% {}
+            100% {}
+        }
+
+        .animation {
+            animation: name duration timing-function delay iteration-count direction animation-play-state;
+            /*动画名称 动画持续时间 动画效果速率 动画开始时间 循化次数(infinite无限) 播放的方向 播放的状态*/
+            animation: myAnim 3s linear 0s infinite;
+        }
+        .animation:hover {
+            animation-play-state: paused;  /*鼠标经过动画播放状态暂停*/
+        }
+
+    </style>
+</head>
+<body>
+    <p>脱离文档流 浮动 绝对与固定定位</p>
+
+    浮动的副作用 1父元素高度塌陷 2后续的元素也会受到影响
+    {
+        解决方法 
+        1 给父级添加高度并给加浮动的元素添加clear
+        2 在父级元素中添加overflow:hidden;clear:both; 并在同子级且未浮动的元素中也添加clear:both
+        3 给父级添加伪对象 ::after{content:'';display:block;clear:both}
+    }
+    
+</body>
+<script type="module"></script>
+</html>
